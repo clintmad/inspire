@@ -1,19 +1,27 @@
-(function(){
+(function () {
 	var quoteService = new QuoteService();
 
-quoteService.getQuote()
-	.then(function(data){
-		console.log(data)
-		
-		var template = $('#quoteTemplate').html();
+	quoteService.getQuote()
+		.then(function (data) {
+			console.log(data)
 
-		template = template.replace('{{ quote }}', data.quote);
-		template = template.replace('{{ author }}', data.author);
+			var template = $('#quoteTemplate').html();
 
-		$('#quote').append($(template));
-	})
+			template = template.replace('{{ quote }}', data.quote);
+			
+
+			$('#quote').append($(template));
+			$('#quote').hover(function () {
+				$(this).append($(`<span>-${data.author}</span>`));
+			},
+				function () {
+					$(this).find("span:last").remove();
+				});
+
+		})
 
 
-	
-	
-}())
+
+
+
+} ())

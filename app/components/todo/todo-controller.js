@@ -26,10 +26,13 @@
 			for (var i = 0; i < list.length; i++) {
 				listElem.empty();
 				template += `
-                <li id="${i}">${list[i]}</li>
-				<button class="delete" id="${i}">X</button>`
+                <h4 id="${i}">${list[i]}
+				<button class="delete" id="${i}">X</button></h4>`
+				
 			}
+			listElem.empty();
 			listElem.append(taskTemplate, template);
+			
 		}		
 	}
 	TodoController();
