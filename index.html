@@ -16,9 +16,27 @@
 	</div>
 
 	<div id="todo">
-
+		<div clas="header">
+			<h3>To Do List</h3>
+			<input type="text" id="myInput" placeholder="Add to list">
+			<button id="add">Add</button>
+		</div>
+		<ul id="todoList">
+			<li></li>
+		</ul>
 	</div>
-
+	<script type="text/html" id="image">
+		<img src="{{ url }}">
+	</script>
+	<script type="text/html" id="quoteTemplate">
+		<div class="quote">
+			<span>{{ quote }}</span>
+		</div>
+		
+		<div class="author">
+			<span>{{ author }}</span>
+		</div>
+	</script>
 
 
 
