@@ -1,55 +1,37 @@
 (function () {
 	function TodoController() {
 
-
-
 		var todoService = new TodoService();
-		update(todoService.getTodos());
+		todoService.newItem = todoService.getTodos();
+		update();
 
-	
 		$('form').on('submit', function (e) {
-			debugger
 			e.preventDefault();
-			var temp = this.listItem.value;
-			todoService.newItem = todoService.getTodos();
+			var temp = this.listItem.value;			
 			todoService.newItem.push(temp);
 			todoService.saveTodos(todoService.newItem);
-
-			update(todoService.getTodos());
+			update();
 		})
-		
 
-		function update(list) {
-			debugger
+		$('#list').on('click', '.delete', function () {
+			todoService.removeTodos(this.id);
+			update()
+		})
+
+		function update() {
+			var list = todoService.getTodos()
 			var listElem = $('#list');
-				var template = '';
-
+			var taskTemplate = `<h3>Number of tasks: ${list.length}</h3>`
+			var template = '';
 			for (var i = 0; i < list.length; i++) {
 				listElem.empty();
-				debugger
 				template += `
-				<li>${list[i]}</li>
-				<button class="button">X</button>`
-
-
+                <li id="${i}">${list[i]}</li>
+				<button class="delete" id="${i}">X</button>`
 			}
-			listElem.append(template);
-
-		}
-
+			listElem.append(taskTemplate, template);
+		}		
 	}
-
-
-
-
-
 	TodoController();
 
-	// new up the TodoService that has already been configured for your use
-	// There are two methods getTodos returns and array
-	// saveTodos accepts an array and stores it to your local storage
-
-
-
-
-} ())
+} ()) //closes iife
