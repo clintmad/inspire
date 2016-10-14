@@ -23,18 +23,18 @@ Below you will see an image that you may use for inspiration.
 It is your responsibility to render each piece of the data from the services out to the screen. Look carefully at each controller to figure out the properties that will need to be used for visualization.
 
 Requirements:
-- `5 points`: The data from the services are each rendered. Quote, Image, Weather, Todo 
+- `5 points`: x The data from the services are each rendered. Quote, Image, Weather, Todo 
 
 ###Step 2 - Adding the functionality `Total Points: 10`
 
 The todolist is perhaps on of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
 
 Requirements: 
-- `2.5 points`: The todolist allows items to be added to a list
+- `2.5 points`: x The todolist allows items to be added to a list 
 - `2.5 points`: The todolist allows items to be removed from the list
-- `2.5 points`: The todolist takes advantage of the TodoService to provide persistant data through localStorage 
+- `2.5 points`: x The todolist takes advantage of the TodoService to provide persistant data through localStorage 
 - `1.25 points`: The todolist shows the total count of task currently being tracked
-- `1.25 points`: Clicking the weather should let the user toggle between Celsius and Fahrenheit display
+- `1.25 points`: x Clicking the weather should let the user toggle between Celsius and Fahrenheit display
 
 ###Step 3 - Prettify `Total Points: 5`
 
@@ -42,7 +42,7 @@ The positioning of elements on the page is not the absolute most crucial thing f
 
 Requirements:
 - `2.5 points`: On hover the quote should show the author of the quote
-- `2.5 points`: The image should be on large display with at least one other element positioned over the top of the image.  
+- `2.5 points`: x The image should be on large display with at least one other element positioned over the top of the image.  
 
 ###BONUS - Watching Time Tick `Total Points: 5`
 Requirements: 

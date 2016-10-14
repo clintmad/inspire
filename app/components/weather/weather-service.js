@@ -18,4 +18,8 @@ function WeatherService() {
 			callWhenDone(res);
 		})
 	}
+
+	
+
+		
 }
