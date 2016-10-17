@@ -3,42 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Amita|Architects+Daughter|Indie+Flower|Kaushan+Script" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body id="body">
-	<div id="weather">
-
-	</div>
-
-	<div id="quote">
-
-	</div>
-
-	<div id="todo">
-		<form>
-			<input type="text" name="listItem" />			
-			<button type="submit">Add</button>
-		</form>
-		<ol id="list">
-
-		</ol>
-	</div>
-	
-	<script type="text/html" id="quoteTemplate">
-		<div class="quote">
-			<h3>{{ quote }}</h3>
+<body id="body" onload="startTime()">
+	<div class="container-fluid">
+		<div class="row flex">
+			<div class="cardClock text-center">
+				<h1 class="clock" id="clock"></h1>
+			</div>
+			<div id="weather">
+				<!--Weather Append-->
+			</div>
 		</div>
-		
-		<!--<div class="author">
-			<span>{{ author }}</span>
-		</div>-->
+
+		<div class="row flex" id="todo">
+			<div class="card">
+				<form>
+					<input type="text" name="listItem" />
+					<button class="check"><span type="submit" class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+				</form>
+				<ol class="" id="list">
+
+				</ol>
+			</div>
+		</div>
+		<div class="flex row">
+			<div class="indie" id="quote">
+				<!--Quote Append-->
+			</div>
+		</div>
+	</div>
+	<script id="quoteTemplate">
+		<div>
+			<h2> {{ quote }} </h2>
+		</div>
 	</script>
 
-
-
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="app/init.js"></script>
 	<script src="app/components/weather/weather-service.js"></script>
 	<script src="app/components/image/image-service.js"></script>
@@ -50,6 +54,7 @@
 	<script src="app/components/image/image-controller.js"></script>
 	<script src="app/components/quote/quote-controller.js"></script>
 	<script src="app/components/todo/todo-controller.js"></script>
+	<script src="app/components/clock/clock-controller.js"></script>
 
 </body>
 
